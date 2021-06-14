@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* 이사만루 light */
+@font-face {
+    font-family: 'GongGothicLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 유토이미지 고딕R */
+@font-face {
+    font-family: 'BBTreeGR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* noto sans */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/NotoSansKr/NotoSansKR-Regular.woff2) format('woff2'),
+    url(/fonts/NotoSansKr/NotoSansKR-Regular.woff) format('woff'),
+    url(/fonts/NotoSansKr/NotoSansKR-Regular.otf) format('opentype');
+    }
+/* color */
+:root {
+    --first-color : #17a46a;
+    --second-color : #ff7300;
+    --third-color : rgb(66, 66, 66);
+    --font-size-large : 20px;
+    --font-size-medium : 13px;
+    --font-size-small : 9px;
+}
+/* scroll bar */
+::-webkit-scrollbar{width: 8px;}
+::-webkit-scrollbar-track {background-color:#ffffff;}
+::-webkit-scrollbar-thumb {background-color:var(--first-color);}
+/* ctrl + c, ctrl + v */
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+/* setting */
+.inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    /* background: #ddd; */
+}
+/* header */
+header {
+    font-family: 'GongGothicLight';
+    width: 100%;
+    height: 132px;
+    /* background: teal; */
+}
+header .inner {
+    height: 132px;
+    position: relative;
+}
+.header__logo {
+    width: 261px;
+    height: 63px;
+    position: absolute;
+    bottom: 20px;
+
+}
+.header__gnb {
+    /* display: inline-block; */
+    height: 63px;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+}
+.header__gnb__item {
+    text-align: center;
+    vertical-align: bottom;
+    line-height: 50px;
+    /* margin: 20px; */
+    margin: 20px 0 20px 0;
+    width: 170px;
+    height: 50px;
+    float: left;
+    position: relative;
+    font-size: var(--font-size-medium);
+}
+.header__gnb__item__menu:after {
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 4px;
+    background: var(--first-color);
+    transition: all .5s;
+}
+.header__gnb__item__menu:hover:after {
+    width: 112px;
+    transform: translateX(-50%);
+}
+.header__gnb__item-wrap {
+    position: absolute;
+    top: 75px;
+    left: 11px;
+    line-height: 55px;
+    width: 160px;
+    background: #fff;
+    text-align: left;
+    font-size: 18px;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.473);
+    /* visibility: hidden; */
+}
+.header__gnb__item-wrap a {
+    width: 100%;
+    padding-left: 1.5rem;
+}
+.header__gnb__item-sub-menu:hover {
+    background: var(--first-color);
+    color: #fff;
+    
+}
+.header__gnb__item__menu:hover .header__gnb__item-wrap {
+    visibility: visible;
+}
