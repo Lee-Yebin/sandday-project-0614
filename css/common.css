@@ -100,6 +100,9 @@ header .inner {
     width: 112px;
     transform: translateX(-50%);
 }
+.header__gnb__item__menu:hover ~ .header__gnb__item-wrap {
+    opacity: 1;
+}
 .header__gnb__item-wrap {
     position: absolute;
     top: 75px;
@@ -111,6 +114,7 @@ header .inner {
     font-size: 18px;
     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.473);
     /* visibility: hidden; */
+    opacity: 0;
 }
 .header__gnb__item-wrap a {
     width: 100%;
