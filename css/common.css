@@ -66,29 +66,45 @@ header .inner {
     bottom: 20px;
 
 }
+
+.header__gnb__item {
+
+}
+.header__gnb__item-wrap a {
+    width: 100%;
+    padding-left: 1.5rem;
+}
+/*  */
 .header__gnb {
     /* display: inline-block; */
+}
+.header__gnb {
     height: 63px;
     position: absolute;
     bottom: 20px;
     right: 0;
+    float: left;
 }
 .header__gnb__item {
+    display: inline-block;
+    margin-right: 10rem;
+    line-height: 100px;
+    position: relative;
+    bottom: 10px;
     text-align: center;
+    z-index: 99;
     vertical-align: bottom;
-    line-height: 50px;
     /* margin: 20px; */
     margin: 20px 0 20px 0;
     width: 170px;
     height: 50px;
-    float: left;
-    position: relative;
-    font-size: var(--font-size-medium);
+    /* float: left; */
+    font-size: 22px;
 }
-.header__gnb__item__menu:after {
+.header__gnb__item a:after {
     content: '';
     position: absolute;
-    bottom: -13px;
+    bottom: -23px;
     left: 50%;
     transform: translateX(-50%);
     width: 0;
@@ -96,16 +112,25 @@ header .inner {
     background: var(--first-color);
     transition: all .5s;
 }
-.header__gnb__item__menu:hover:after {
+.header__gnb__item:hover > a {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+.header__gnb__item:hover > a::after {
     width: 112px;
     transform: translateX(-50%);
 }
-.header__gnb__item__menu:hover ~ .header__gnb__item-wrap {
-    opacity: 1;
+.header__gnb__item:hover .header__gnb__item-wrap {
+    visibility: visible;
 }
 .header__gnb__item-wrap {
+    /* ver1 */
+    /* top: 101px;
+    left: 0; */
+    width: 150px;
+    visibility: hidden;
     position: absolute;
-    top: 75px;
+    top: 85px;
     left: 11px;
     line-height: 55px;
     width: 160px;
@@ -113,18 +138,21 @@ header .inner {
     text-align: left;
     font-size: 18px;
     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.473);
-    /* visibility: hidden; */
-    opacity: 0;
+    /* ver2 */
+    /* position: absolute;
+    top: 101px;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+    width: 100%; */
+
+
 }
-.header__gnb__item-wrap a {
+
+.header__gnb__item-wrap li {
+    display: inline-block;
     width: 100%;
-    padding-left: 1.5rem;
 }
-.header__gnb__item-sub-menu:hover {
+.header__gnb__item-wrap a:hover {
     background: var(--first-color);
     color: #fff;
-    
-}
-.header__gnb__item__menu:hover .header__gnb__item-wrap {
-    visibility: visible;
 }
